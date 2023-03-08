@@ -4,14 +4,83 @@
     "D:\\han_data\\interviewTest\\RumahMakanMVC\\RumahMakan.Services\\RumahMakan.Services.csproj": {}
   },
   "projects": {
-    "D:\\han_data\\interviewTest\\RumahMakanMVC\\RumahMakan.Services\\RumahMakan.Services.csproj": {
+    "D:\\han_data\\interviewTest\\RumahMakanMVC\\RUmahMakan.Contrak\\RUmahMakan.Contrak.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\han_data\\interviewTest\\RumahMakanMVC\\RumahMakan.Services\\RumahMakan.Services.csproj",
-        "projectName": "RumahMakan.Services",
-        "projectPath": "D:\\han_data\\interviewTest\\RumahMakanMVC\\RumahMakan.Services\\RumahMakan.Services.csproj",
+        "projectUniqueName": "D:\\han_data\\interviewTest\\RumahMakanMVC\\RUmahMakan.Contrak\\RUmahMakan.Contrak.csproj",
+        "projectName": "RUmahMakan.Contrak",
+        "projectPath": "D:\\han_data\\interviewTest\\RumahMakanMVC\\RUmahMakan.Contrak\\RUmahMakan.Contrak.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\han_data\\interviewTest\\RumahMakanMVC\\RumahMakan.Services\\obj\\",
+        "outputPath": "D:\\han_data\\interviewTest\\RumahMakanMVC\\RUmahMakan.Contrak\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\han_data\\interviewTest\\RumahMakanMVC\\RUmahMakan.Domain\\RUmahMakan.Domain.csproj": {
+                "projectPath": "D:\\han_data\\interviewTest\\RumahMakanMVC\\RUmahMakan.Domain\\RUmahMakan.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\han_data\\interviewTest\\RumahMakanMVC\\RUmahMakan.Domain\\RUmahMakan.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\han_data\\interviewTest\\RumahMakanMVC\\RUmahMakan.Domain\\RUmahMakan.Domain.csproj",
+        "projectName": "RUmahMakan.Domain",
+        "projectPath": "D:\\han_data\\interviewTest\\RumahMakanMVC\\RUmahMakan.Domain\\RUmahMakan.Domain.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "D:\\han_data\\interviewTest\\RumahMakanMVC\\RUmahMakan.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +108,242 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\han_data\\interviewTest\\RumahMakanMVC\\RumahMakan.Persistence\\RumahMakan.Persistence.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\han_data\\interviewTest\\RumahMakanMVC\\RumahMakan.Persistence\\RumahMakan.Persistence.csproj",
+        "projectName": "RumahMakan.Persistence",
+        "projectPath": "D:\\han_data\\interviewTest\\RumahMakanMVC\\RumahMakan.Persistence\\RumahMakan.Persistence.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "D:\\han_data\\interviewTest\\RumahMakanMVC\\RumahMakan.Persistence\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\han_data\\interviewTest\\RumahMakanMVC\\RUmahMakan.Contrak\\RUmahMakan.Contrak.csproj": {
+                "projectPath": "D:\\han_data\\interviewTest\\RumahMakanMVC\\RUmahMakan.Contrak\\RUmahMakan.Contrak.csproj"
+              },
+              "D:\\han_data\\interviewTest\\RumahMakanMVC\\RUmahMakan.Domain\\RUmahMakan.Domain.csproj": {
+                "projectPath": "D:\\han_data\\interviewTest\\RumahMakanMVC\\RUmahMakan.Domain\\RUmahMakan.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.17, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\han_data\\interviewTest\\RumahMakanMVC\\RumahMakan.Services.Abstraction\\RumahMakan.Services.Abstraction.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\han_data\\interviewTest\\RumahMakanMVC\\RumahMakan.Services.Abstraction\\RumahMakan.Services.Abstraction.csproj",
+        "projectName": "RumahMakan.Services.Abstraction",
+        "projectPath": "D:\\han_data\\interviewTest\\RumahMakanMVC\\RumahMakan.Services.Abstraction\\RumahMakan.Services.Abstraction.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "D:\\han_data\\interviewTest\\RumahMakanMVC\\RumahMakan.Services.Abstraction\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\han_data\\interviewTest\\RumahMakanMVC\\RUmahMakan.Contrak\\RUmahMakan.Contrak.csproj": {
+                "projectPath": "D:\\han_data\\interviewTest\\RumahMakanMVC\\RUmahMakan.Contrak\\RUmahMakan.Contrak.csproj"
+              },
+              "D:\\han_data\\interviewTest\\RumahMakanMVC\\RUmahMakan.Domain\\RUmahMakan.Domain.csproj": {
+                "projectPath": "D:\\han_data\\interviewTest\\RumahMakanMVC\\RUmahMakan.Domain\\RUmahMakan.Domain.csproj"
+              },
+              "D:\\han_data\\interviewTest\\RumahMakanMVC\\RumahMakan.Persistence\\RumahMakan.Persistence.csproj": {
+                "projectPath": "D:\\han_data\\interviewTest\\RumahMakanMVC\\RumahMakan.Persistence\\RumahMakan.Persistence.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\han_data\\interviewTest\\RumahMakanMVC\\RumahMakan.Services\\RumahMakan.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\han_data\\interviewTest\\RumahMakanMVC\\RumahMakan.Services\\RumahMakan.Services.csproj",
+        "projectName": "RumahMakan.Services",
+        "projectPath": "D:\\han_data\\interviewTest\\RumahMakanMVC\\RumahMakan.Services\\RumahMakan.Services.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "D:\\han_data\\interviewTest\\RumahMakanMVC\\RumahMakan.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\han_data\\interviewTest\\RumahMakanMVC\\RUmahMakan.Contrak\\RUmahMakan.Contrak.csproj": {
+                "projectPath": "D:\\han_data\\interviewTest\\RumahMakanMVC\\RUmahMakan.Contrak\\RUmahMakan.Contrak.csproj"
+              },
+              "D:\\han_data\\interviewTest\\RumahMakanMVC\\RUmahMakan.Domain\\RUmahMakan.Domain.csproj": {
+                "projectPath": "D:\\han_data\\interviewTest\\RumahMakanMVC\\RUmahMakan.Domain\\RUmahMakan.Domain.csproj"
+              },
+              "D:\\han_data\\interviewTest\\RumahMakanMVC\\RumahMakan.Services.Abstraction\\RumahMakan.Services.Abstraction.csproj": {
+                "projectPath": "D:\\han_data\\interviewTest\\RumahMakanMVC\\RumahMakan.Services.Abstraction\\RumahMakan.Services.Abstraction.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

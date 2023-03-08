@@ -1,0 +1,15 @@
+D:\han_data\interviewTest\RumahMakanMVC\RUmahMakan.Contrak\bin\Debug\net5.0\RUmahMakan.Contrak.deps.json
+D:\han_data\interviewTest\RumahMakanMVC\RUmahMakan.Contrak\bin\Debug\net5.0\RUmahMakan.Contrak.dll
+D:\han_data\interviewTest\RumahMakanMVC\RUmahMakan.Contrak\bin\Debug\net5.0\RUmahMakan.Contrak.pdb
+D:\han_data\interviewTest\RumahMakanMVC\RUmahMakan.Contrak\bin\Debug\net5.0\RUmahMakan.Domain.dll
+D:\han_data\interviewTest\RumahMakanMVC\RUmahMakan.Contrak\bin\Debug\net5.0\RUmahMakan.Domain.pdb
+D:\han_data\interviewTest\RumahMakanMVC\RUmahMakan.Contrak\obj\Debug\net5.0\RUmahMakan.Contrak.csproj.AssemblyReference.cache
+D:\han_data\interviewTest\RumahMakanMVC\RUmahMakan.Contrak\obj\Debug\net5.0\RUmahMakan.Contrak.GeneratedMSBuildEditorConfig.editorconfig
+D:\han_data\interviewTest\RumahMakanMVC\RUmahMakan.Contrak\obj\Debug\net5.0\RUmahMakan.Contrak.AssemblyInfoInputs.cache
+D:\han_data\interviewTest\RumahMakanMVC\RUmahMakan.Contrak\obj\Debug\net5.0\RUmahMakan.Contrak.AssemblyInfo.cs
+D:\han_data\interviewTest\RumahMakanMVC\RUmahMakan.Contrak\obj\Debug\net5.0\RUmahMakan.Contrak.csproj.CoreCompileInputs.cache
+D:\han_data\interviewTest\RumahMakanMVC\RUmahMakan.Contrak\obj\Debug\net5.0\RUmahMakan.Contrak.csproj.CopyComplete
+D:\han_data\interviewTest\RumahMakanMVC\RUmahMakan.Contrak\obj\Debug\net5.0\RUmahMakan.Contrak.dll
+D:\han_data\interviewTest\RumahMakanMVC\RUmahMakan.Contrak\obj\Debug\net5.0\refint\RUmahMakan.Contrak.dll
+D:\han_data\interviewTest\RumahMakanMVC\RUmahMakan.Contrak\obj\Debug\net5.0\RUmahMakan.Contrak.pdb
+D:\han_data\interviewTest\RumahMakanMVC\RUmahMakan.Contrak\obj\Debug\net5.0\ref\RUmahMakan.Contrak.dll

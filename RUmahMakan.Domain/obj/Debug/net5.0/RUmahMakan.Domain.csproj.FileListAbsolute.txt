@@ -1,0 +1,12 @@
+D:\han_data\interviewTest\RumahMakanMVC\RUmahMakan.Domain\bin\Debug\net5.0\RUmahMakan.Domain.deps.json
+D:\han_data\interviewTest\RumahMakanMVC\RUmahMakan.Domain\bin\Debug\net5.0\RUmahMakan.Domain.dll
+D:\han_data\interviewTest\RumahMakanMVC\RUmahMakan.Domain\bin\Debug\net5.0\RUmahMakan.Domain.pdb
+D:\han_data\interviewTest\RumahMakanMVC\RUmahMakan.Domain\obj\Debug\net5.0\RUmahMakan.Domain.csproj.AssemblyReference.cache
+D:\han_data\interviewTest\RumahMakanMVC\RUmahMakan.Domain\obj\Debug\net5.0\RUmahMakan.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\han_data\interviewTest\RumahMakanMVC\RUmahMakan.Domain\obj\Debug\net5.0\RUmahMakan.Domain.AssemblyInfoInputs.cache
+D:\han_data\interviewTest\RumahMakanMVC\RUmahMakan.Domain\obj\Debug\net5.0\RUmahMakan.Domain.AssemblyInfo.cs
+D:\han_data\interviewTest\RumahMakanMVC\RUmahMakan.Domain\obj\Debug\net5.0\RUmahMakan.Domain.csproj.CoreCompileInputs.cache
+D:\han_data\interviewTest\RumahMakanMVC\RUmahMakan.Domain\obj\Debug\net5.0\RUmahMakan.Domain.dll
+D:\han_data\interviewTest\RumahMakanMVC\RUmahMakan.Domain\obj\Debug\net5.0\refint\RUmahMakan.Domain.dll
+D:\han_data\interviewTest\RumahMakanMVC\RUmahMakan.Domain\obj\Debug\net5.0\RUmahMakan.Domain.pdb
+D:\han_data\interviewTest\RumahMakanMVC\RUmahMakan.Domain\obj\Debug\net5.0\ref\RUmahMakan.Domain.dll

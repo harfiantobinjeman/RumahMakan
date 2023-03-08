@@ -1,11 +1,20 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
+using RumahMakan.Persistence.Base;
+using RumahMakan.Persistence.RepositoryContext;
+using RumahMakan.Services;
+using RumahMakan.Services.Abstraction;
+using RUmahMakan.Domain.Base;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -24,6 +33,22 @@ namespace RumahMakan.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            //addscope
+            services.AddScoped<IProductionServiceManager, ProductionServiceManager>();
+            services.AddScoped<IProductionRepositoryManager, ProductionRepositoryManager>();
+
+
+            services.AddAutoMapper(typeof(Startup));
+
+            //add DbContextCOnecting string
+            //services.AddDbContext<RumahMakanDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<RumahMakanDbContext>(opts =>
+            {
+                opts.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]);
+            });
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -41,17 +66,25 @@ namespace RumahMakan.Web
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseStaticFiles(new StaticFileOptions()
+            {
+                FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), @"Resources")),
+                RequestPath = new PathString("/Resources")
+            });
 
             app.UseRouting();
-
+            //call useAuthencation
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Products}/{action=Index}/{id?}");
             });
+
+            app.UseAuthentication();
         }
     }
 }
