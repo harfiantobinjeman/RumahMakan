@@ -14,5 +14,8 @@ namespace RUmahMakan.Domain.Model
         public string ImageURL { get; set; }
         public decimal Price { get; set; }
         public int Qty { get; set; }
+        public int CategoryId { get; set; }
+
+        public virtual ProductCategory Category { get; set; }
     }
 }

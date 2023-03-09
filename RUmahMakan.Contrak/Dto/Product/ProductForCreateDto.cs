@@ -16,6 +16,6 @@ namespace RUmahMakan.Contrak.Dto.Product
         public int Qty { get; set; }
         public int CategoryId { get; set; }
 
-        public virtual ICollection<ProductCategory> Category { get; set; }
+        public virtual ICollection<ProductCategoryDto> Category { get; set; }
     }
 }

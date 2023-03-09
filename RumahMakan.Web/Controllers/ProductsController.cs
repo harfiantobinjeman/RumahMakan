@@ -7,22 +7,28 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using RUmahMakan.Domain.Model;
 using RumahMakan.Persistence.RepositoryContext;
+using RumahMakan.Services.Abstraction;
+using RUmahMakan.Contrak.Dto.Product;
 
 namespace RumahMakan.Web.Controllers
 {
     public class ProductsController : Controller
     {
         private readonly RumahMakanDbContext _context;
+        private readonly IProductionServiceManager _productionServiceManager;
 
-        public ProductsController(RumahMakanDbContext context)
+        public ProductsController(RumahMakanDbContext context, IProductionServiceManager productionServiceManager = null)
         {
             _context = context;
+            _productionServiceManager = productionServiceManager;
         }
 
         // GET: Products
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Products.ToListAsync());
+            //return View(await _context.Products.ToListAsync());
+            var productDtos = await _productionServiceManager.ProductServiceses.GetProductAll(false);
+            return View(productDtos);
         }
 
         // GET: Products/Details/5
@@ -54,7 +60,7 @@ namespace RumahMakan.Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Description,ImageURL,Price,Qty,ProductCategoryId")] Product product)
+        public async Task<IActionResult> Create([Bind("Id,Name,Description,ImageURL,Price,Qty")] Product product)
         {
             if (ModelState.IsValid)
             {
@@ -73,7 +79,9 @@ namespace RumahMakan.Web.Controllers
                 return NotFound();
             }
 
-            var product = await _context.Products.FindAsync(id);
+            //var product = await _context.Products.FindAsync(id);
+            var product = await _productionServiceManager.ProductServiceses.GetByIdProduct((int)id, true);
+            ViewBag.Product = product.Category;
             if (product == null)
             {
                 return NotFound();
@@ -86,9 +94,9 @@ namespace RumahMakan.Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Description,ImageURL,Price,Qty")] Product product)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Description,ImageURL,Price,Qty,CategoryId")] ProductDto productDto)
         {
-            if (id != product.Id)
+            if (id != productDto.Id)
             {
                 return NotFound();
             }
@@ -97,12 +105,13 @@ namespace RumahMakan.Web.Controllers
             {
                 try
                 {
-                    _context.Update(product);
-                    await _context.SaveChangesAsync();
+                    /*_context.Update(productDto);
+                    await _context.SaveChangesAsync();*/
+                    _productionServiceManager.ProductServiceses.Edit(productDto);
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ProductExists(product.Id))
+                    if (!ProductExists(productDto.Id))
                     {
                         return NotFound();
                     }
@@ -113,7 +122,7 @@ namespace RumahMakan.Web.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(product);
+            return View(productDto);
         }
 
         // GET: Products/Delete/5
@@ -124,8 +133,9 @@ namespace RumahMakan.Web.Controllers
                 return NotFound();
             }
 
-            var product = await _context.Products
-                .FirstOrDefaultAsync(m => m.Id == id);
+            /*var product = await _context.Products
+                .FirstOrDefaultAsync(m => m.Id == id);*/
+            var product = await _productionServiceManager.ProductServiceses.GetByIdProduct((int)id, true);
             if (product == null)
             {
                 return NotFound();
@@ -137,11 +147,13 @@ namespace RumahMakan.Web.Controllers
         // POST: Products/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(int? id)
         {
             var product = await _context.Products.FindAsync(id);
             _context.Products.Remove(product);
             await _context.SaveChangesAsync();
+            /*var product = await _productionServiceManager.ProductServiceses.GetByIdProduct((int)id, true);
+            _productionServiceManager.ProductServiceses.Remove(product);*/
             return RedirectToAction(nameof(Index));
         }
 

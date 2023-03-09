@@ -8,8 +8,11 @@ namespace RumahMakan.Web.Mapping
     {
         public MappingProfile()
         {
-            CreateMap<Product, ProductDto>().ReverseMap();
-            CreateMap<Product, ProductForCreateDto>().ReverseMap();
+            CreateMap<Product, ProductDto>()
+                .ReverseMap();
+            CreateMap<Product, ProductForCreateDto>()
+                .ReverseMap();
+
         }
     }
 }

@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace RumahMakan.Persistence.Repositories.Productions
 {
-    internal class ProductRepository : RepositoryBase<Product>, IProductRepository
+    public class ProductRepository : RepositoryBase<Product>, IProductRepository
     {
         public ProductRepository(RumahMakanDbContext dbContext) : base(dbContext)
         {
@@ -26,13 +26,20 @@ namespace RumahMakan.Persistence.Repositories.Productions
         public async Task<IEnumerable<Product>> GetAllProducts(bool trackChange)
         {
             //throw new NotImplementedException();
-            return await FindAll(trackChange).OrderBy(s => s.Id).ToListAsync();
+            return await FindAll(trackChange).OrderBy(s => s.CategoryId)
+                .Include(p => p.Category)
+                .ToListAsync();
+            /*var result = await _dbContext.Products.FromSqlRaw("Select * from Products" +
+                "join ProductCategories on ProductCategories.Id = Products.CategoryId").ToListAsync();
+            return result;*/
         }
 
         public async Task<Product> GetProductById(int id, bool trackChange)
         {
             //throw new NotImplementedException();
-            return await FindByCondition(s=> s.Id.Equals(id), trackChange).SingleOrDefaultAsync();
+            return await FindByCondition(s=> s.Id.Equals(id), trackChange)
+                .Include(p => p.Category)
+                .SingleOrDefaultAsync();
         }
 
         public void Insert(Product product)

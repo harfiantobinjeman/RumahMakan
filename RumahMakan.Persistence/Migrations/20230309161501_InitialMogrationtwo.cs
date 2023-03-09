@@ -2,7 +2,7 @@
 
 namespace RumahMakan.Persistence.Migrations
 {
-    public partial class InitialMigrasiOne : Migration
+    public partial class InitialMogrationtwo : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -30,17 +30,17 @@ namespace RumahMakan.Persistence.Migrations
                     ImageURL = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     Qty = table.Column<int>(type: "int", nullable: false),
-                    ProductCategoryId = table.Column<int>(type: "int", nullable: true)
+                    CategoryId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Products", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Products_ProductCategories_ProductCategoryId",
-                        column: x => x.ProductCategoryId,
+                        name: "FK_Products_ProductCategories_CategoryId",
+                        column: x => x.CategoryId,
                         principalTable: "ProductCategories",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.InsertData(
@@ -54,9 +54,9 @@ namespace RumahMakan.Persistence.Migrations
                 values: new object[] { 2, "Minuman" });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Products_ProductCategoryId",
+                name: "IX_Products_CategoryId",
                 table: "Products",
-                column: "ProductCategoryId");
+                column: "CategoryId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
